@@ -1,0 +1,96 @@
+/* Apply box-sizing: border-box to all elements, ensuring that padding and borders are included in the width/height calculations. */
+* {
+    box-sizing: border-box; // Ensures that padding and borders are included within the element's total width and height, preventing overflow or layout issues.
+    margin: 0; // Resets the default margin applied by the browser, ensuring consistency across elements.
+    padding: 0; // Resets the default padding applied by the browser, ensuring no unwanted spacing around elements.
+}
+
+/* Styles for the body of the page */
+body {
+    background-color: #1e555c; // Sets the background color of the page to a light purple shade.
+    height: 100vh; // Ensures the body's height is set to 100% of the viewport height, causing it to fill the entire screen.
+    text-align: center; // Centers the content horizontally within the body.
+    color: #FFF; // Sets the text color to white.
+}
+
+/* Main container that holds the whole layout and centers the content inside it */
+main {
+    height: 100%; // Ensures the main container takes up 100% of the available height.
+    display: flex; // Enables the use of flexbox for the layout, allowing easy alignment and distribution of elements.
+    flex-direction: column; // Aligns the child elements vertically (in a column) within the main container.
+    justify-content: center; // Vertically centers child elements within the main container, ensuring they are in the middle.
+    align-items: center; // Horizontally centers child elements within the main container, ensuring they are aligned in the center.
+    gap: 20px; // Adds 20px of space between each child element in the main container for spacing.
+}
+
+/* Styles for the main title */
+.main-title {
+    font-size: 40px; // Sets the font size of the main title to 40px.
+    margin-bottom: 15px; // Adds 15px of space at the bottom of the main title for spacing.
+}
+
+/* Styles the container for the length controls */
+.length-controls {
+    display: flex; // Uses flexbox for the length controls layout.
+    justify-content: space-around; // Distributes the length controls evenly with space around them.
+}
+
+/* Styles the length control */
+.length-control {
+    width: 250px; // Sets the width of the length control container to 250px.
+    font-size: 1.5rem; // Sets the font size of the length control text to 1.5 times the default font size.
+
+    .btn-container {
+        display: flex; // Uses flexbox for the button container layout.
+        justify-content: center; // Centers the buttons horizontally within the container.
+        gap: 10px; // Adds 10px of space between the buttons for spacing.
+    }
+}
+
+/* Styles the button */
+button {
+    background: none; // Sets the background color of the button to transparent.
+    outline: none; // Removes the default outline applied by the browser.
+    border: none; // Removes the default border applied by the browser.
+    color: white; // Sets the text color of the button to white.
+    cursor: pointer // Changes the cursor to a pointer when hovering over the button, indicating it's clickable.
+}
+
+/* Styles the timer-control container */
+.timer-control {
+    display: flex; // Uses flexbox for the timer control layout.
+    justify-content: center; // Centers the timer control horizontally within the container.
+    gap: 10px; // Adds 10px of space between the timer control buttons for spacing.
+}
+
+/* Styles the timer container */
+.timer {
+    border: 7px solid #13353a; // Sets the border of the timer container to a specific color.
+    margin: 20px auto 10px; // Adds 20px of space at the top, centers the timer container horizontally, and adds 10px of space at the bottom.
+    width: 300px; // Sets the width of the timer container to 300px.
+    height: 150px; // Sets the height of the timer container to 150px.
+    border-radius: 50px; // Sets the border radius of the timer container to 50px, creating a circular shape.
+
+    /* Styles the timer-wrapper which inside the timer container */
+    .timer-wrapper {
+        height: 100%; // Ensures the timer-wrapper takes up 100% of the height of the timer container.
+        display: flex; // Uses flexbox for the timer-wrapper layout.
+        flex-direction: column; // Aligns the child elements vertically (in a column) within the timer-wrapper.
+        justify-content: center; // Vertically centers child elements within the timer-wrapper, ensuring they are in the middle.
+        align-items: center; // Horizontally centers child elements within the timer-wrapper, ensuring they are aligned in the center.
+        gap: 10px; // Adds 10px of space between each child element in the timer-wrapper for spacing.
+        font-size: 1.5rem; // Sets the font size of the timer-wrapper text to 1.5 times the default font size.
+
+        /* Styles the element with the id "time-left" which is inside the timer-wrapper*/
+        #time-left {
+            font-family: digital; // Applies a digital-style font to the text.
+            font-size: 70px; // Sets the font size of the text to 70px.
+        }
+    }
+}
+
+/* Styles the footer */
+.footer {
+    margin-top: 20px; // Adds 20px of space at the top of the footer for spacing.
+    font-size: 2rem; // Sets the font size of the footer text to 2 times the default font size.
+}

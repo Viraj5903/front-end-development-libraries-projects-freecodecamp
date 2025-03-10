@@ -1,0 +1,93 @@
+/* Reset all basic styles to ensure consistency across browsers */
+* {
+    box-sizing: border-box; // Ensures that padding and border are included in element's total width and height
+    margin: 0; // Resets any default margin
+    padding: 0; // Resets any default padding
+}
+
+/* Basic body styling */
+body {
+    background-color: #333; // Dark gray background for the entire page
+    color: #333; // Dark gray text color for body, this will be overridden later inside specific elements
+    font-family: Arial, sans-serif; // Specifies the font family for text
+    font-weight: 400; // Normal font weight for body text
+    display: flex; // Uses Flexbox to align children elements
+    justify-content: center; // Centers the content horizontally
+    align-items: center; // Centers the content vertically
+    min-height: 100vh; // Ensures the body takes up the full height of the viewport
+}
+
+/* Styling for the main quote box container */
+#quote-box {
+    border-radius: 3px; // Rounded corners for the quote box
+    position: relative; // Allows absolute positioning of child elements inside this container
+    width: 450px; // Fixed width for the quote box
+    padding: 40px 50px; // Padding inside the box to provide spacing around the content
+    display: table; // Makes the box behave like a table element for better layout control
+    background-color: #fff; // White background for the quote box
+
+    /* Styling for the quote text inside the box */
+    #text {
+        text-align: center; // Centers the quote text inside the container
+        width: 450px; // Fixed width for the quote text block
+        height: auto; // Height adjusts according to the content
+        clear: both; // Clears any floating elements above it
+        font-weight: 500; // Slightly bold font weight for the quote text
+        font-size: 1.75em; // Makes the font size larger for emphasis
+    }
+
+    /* Styling for the author text */
+    #author {
+        width: 450px; // Fixed width for author text (same as the quote text)
+        height: auto; // Height adjusts according to the content
+        clear: both; // Ensures no floating elements overlap this section
+        padding-top: 20px; // Adds spacing above the author text
+        font-size: 1em; // Standard font size for the author name
+        text-align: right; // Aligns the author name to the right of the container
+    }
+
+    /* Styling for the button container inside the quote box */
+    .buttons {
+        width: 450px; // Fixed width for the button container (same as quote box width)
+        margin: auto; // Centers the button container horizontally
+        display: block; // Ensures buttons are displayed as block-level elements
+
+        /* Styling for individual buttons inside the quote box */
+        .button {
+            height: 38px; // Fixed height for all buttons
+            border: none; // Removes the default button border
+            border-radius: 3px; // Rounded corners for buttons
+            color: #fff; // White text color for the buttons
+            background-color: #333; // Dark background color for the buttons
+            outline: none; // Removes the outline when the button is focused
+            font-size: 0.85em; // Smaller font size for the button text
+            padding: 8px 18px 6px 18px; // Padding inside the button for spacing
+            margin-top: 30px; // Adds space above the button
+            opacity: 1; // Full opacity for the buttons initially
+            cursor: pointer; // Changes cursor to pointer to indicate the button is clickable
+
+            /* Button hover effect */
+            &:hover {
+                opacity: 0.9; // Slightly reduces opacity when hovering over the button for a visual effect
+            }
+        }
+
+        /* Specific styling for the tweet and tumblr buttons */
+        #tweet-quote,
+        #tumblr-quote {
+            float: left; // Floats the tweet and tumblr buttons to the left of the container
+            padding: 0px; // Removes the default padding for these buttons
+            padding-top: 8px; // Adds padding to the top of the buttons for better alignment
+            text-align: center; // Centers the content (icon) inside the button
+            font-size: 1.2em; // Slightly larger font size for these specific buttons
+            margin-right: 5px; // Adds space between the two buttons
+            height: 30px; // Fixed height for these buttons
+            width: 40px; // Fixed width for these buttons
+        }
+
+        /* Styling for the "new quote" button */
+        #new-quote {
+            float: right; // Floats the "new quote" button to the right of the container
+        }
+    }
+}

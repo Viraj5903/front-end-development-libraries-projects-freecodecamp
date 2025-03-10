@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>Build a 25 + 5 Clock</title>
+    <!-- Importing React, ReactDOM, and PropTypes from esm.sh (a JavaScript package manager, esm.sh allows us to import JavaScript modules from http URLs, no installation/build steps needed.) -->
+    <script type="module">
+        import React from 'https://esm.sh/react@17.0.2';
+        import ReactDOM from 'https://esm.sh/react-dom@17.0.2';
+        import PropTypes from 'https://esm.sh/prop-types@15.8.1';
+
+        // Store React, ReactDOM, and PropTypes in the global window object so they are accessible for Babel and JSX transpilation and other scripts
+        window.React = React;
+        window.ReactDOM = ReactDOM;
+        window.PropTypes = PropTypes;
+    </script>
+
+    <!-- Babel for JSX transpilation (Babel is a JavaScript transpiler that converts JSX to JavaScript. Babel is a JavaScript compiler that transforms modern JavaScript (ES6 and beyond) into backward-compatible code, allowing it to run in older browsers. In the context of React, Babel plays a key role in converting JSX (a syntax extension that looks like HTML) into plain JavaScript that browsers can understand. JSX is not natively recognized by browsers, so Babel compiles it into React.createElement() calls. Additionally, Babel enables features like ES6+ syntax (e.g., arrow functions, classes) and TypeScript to be used in React code, ensuring compatibility across different JavaScript environments while supporting the latest language features.) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="root"></div>
+    </main>
+    <!-- Importing the testable-projects-fcc bundle from freecodecamp -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- JSX code that will be transpiled by Babel -->
+    <script type="text/babel" src="script.js"></script>
+</body>
+
+</html>

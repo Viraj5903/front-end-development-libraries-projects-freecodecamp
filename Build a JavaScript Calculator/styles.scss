@@ -1,0 +1,110 @@
+/* Apply box-sizing: border-box to all elements, ensuring that padding and borders are included in the width/height calculations. */
+* {
+    box-sizing: border-box; // Ensures that padding and borders are included within the element's total width and height, preventing overflow or layout issues.
+    margin: 0; // Resets the default margin applied by the browser, ensuring consistency across elements.
+    padding: 0; // Resets the default padding applied by the browser, ensuring no unwanted spacing around elements.
+}
+
+/* Styles for the body of the page */
+body {
+    background-color: #c2c2d6; // Sets the background color of the page to a light purple shade.
+    height: 100vh; // Ensures the body's height is set to 100% of the viewport height, causing it to fill the entire screen.
+}
+
+/* Main container that holds the whole layout and centers the content inside it */
+main {
+    height: 100%; // Ensures the main container takes up 100% of the available height.
+    display: flex; // Enables the use of flexbox for the layout, allowing easy alignment and distribution of elements.
+    flex-direction: column; // Aligns the child elements vertically (in a column) within the main container.
+    justify-content: center; // Vertically centers child elements within the main container, ensuring they are in the middle.
+    align-items: center; // Horizontally centers child elements within the main container, ensuring they are aligned in the center.
+    gap: 20px; // Adds 20px of space between each child element in the main container for spacing.
+}
+
+/* Styling for the calculator container */
+.calculator {
+    width: 320px; // Sets the width of the calculator container to 320px.
+    margin: 50px auto; // Centers the calculator container horizontally and adds 50px of margin at the top and bottom.
+    padding: 20px; // Adds 20px of padding inside the calculator container for internal spacing.
+    border: 2px solid #47476b; // Adds a 2px solid border with a dark gray color (#47476b) around the calculator.
+    border-radius: 10px; // Rounds the corners of the calculator container with a 10px radius.
+    background: black; // Sets the background color of the calculator container to black.
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); // Adds a subtle shadow around the calculator container for a 3D effect.
+}
+
+/* Styling for the output screen (where results are displayed) */
+.outputScreen {
+    font-size: 29px; // Sets the font size for the output text to 29px, making it large and easy to read.
+    font-family: digital; // Applies a digital-style font to mimic a digital clock or display screen.
+    color: white; // Sets the text color to white for high contrast against the black background.
+    text-align: right; // Aligns the text to the right, ensuring numbers or results are displayed from the right side.
+    line-height: 35px; // Sets the line height for text spacing, ensuring adequate spacing between lines.
+}
+
+/* Styling for the formula screen (where the current formula is displayed) */
+.formulaScreen {
+    min-height: 20px; // Sets a minimum height of 20px for the formula screen, ensuring it is tall enough to display content.
+    font-family: digital; // Applies the same digital font style to maintain consistency with the output screen.
+    font-size: 20px; // Sets the font size for the formula screen text to 20px, making it slightly smaller than the output screen.
+    color: orange; // Sets the text color of the formula screen to orange for contrast and emphasis.
+    text-align: right; // Aligns the text to the right, similar to the output screen.
+    vertical-align: text-top; // Aligns the text vertically at the top of the formula screen for proper positioning.
+    line-height: 20px; // Sets the line height to 20px, making the text neatly spaced out.
+    overflow-wrap: break-word; // Ensures that long words break and wrap onto the next line if they don't fit inside the screen.
+    word-wrap: break-word; // Ensures that long words break if they exceed the available width, preventing horizontal overflow.
+}
+
+/* Container for the buttons (button layout and grid structure) */
+.buttons {
+    display: grid; // Uses a grid layout to position buttons in rows and columns.
+    grid-template-columns: repeat(4, 1fr); // Defines 4 equal-width columns for the buttons inside the grid.
+    grid-gap: 10px; // Adds a 10px gap between the buttons for spacing.
+
+    .button {
+        /* Styling for individual buttons */
+        position: relative; // Allows the button's position to be adjusted relative to its normal position.
+        color: white; // Sets the text color inside the button to white for contrast.
+        outline: 1px solid black; // Adds a 1px solid black outline around the button for definition.
+        border: none; // Removes the default border from the button.
+        background: #4d4d4d; // Sets the default background color of the button to a medium gray.
+        font-family: Share Tech Mono, monospace; // Applies a monospace font for a retro, digital appearance.
+        padding: 20px; // Adds 20px of padding inside the button to make it large and clickable.
+        font-size: 1.5em; // Increases the font size to 1.5em, making the text inside the button larger.
+        border-radius: 10px; // Rounds the corners of the button with a radius of 10px for a soft, modern look.
+        cursor: pointer; // Changes the cursor to a pointer when hovering over the button, indicating it's clickable.
+        transition: background-color 0.2s ease, color 0.2s ease; // Adds a smooth transition effect for the background color and text color when the button is hovered over.
+
+        &:hover:not(#clear, #equals) {
+            /* Hover effect for buttons other than 'clear' and 'equals' */
+            background-color: #ddd; // Changes the background color to a light gray when the button is hovered over for feedback.
+            color: black; // Changes the text color to black when the button is hovered over for contrast.
+        }
+    }
+
+    .number {
+        /* Styling for number buttons */
+        background-color: #4d4d4d; // Sets the background color of number buttons to a medium gray.
+    }
+
+    .operator {
+        /* Styling for operator buttons */
+        background-color: rgb(102, 102, 102); // Sets the background color of operator buttons to a slightly darker gray.
+    }
+
+    #clear {
+        /* Special styles for the 'clear' button */
+        grid-column: span 2; // Makes the 'clear' button span across 2 columns in the grid layout for wider display.
+        background: rgb(172, 57, 57); // Sets the background color of the 'clear' button to a red shade for emphasis.
+    }
+
+    #equals {
+        /* Special styles for the 'equals' button */
+        grid-row: span 2; // Makes the 'equals' button span across 2 rows, making it taller than other buttons.
+        background-color: darkblue; // Sets the background color of the 'equals' button to dark blue.
+    }
+
+    #zero {
+        /* Special styles for the 'zero' button */
+        grid-column: span 2; // Makes the 'zero' button span across 2 columns, making it wider for ease of use.
+    }
+}

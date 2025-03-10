@@ -1,0 +1,86 @@
+/* Reset all basic styles to ensure consistency across browsers */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic body styling */
+body {
+  background-color: #333;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Styling for the main quote box container */
+#quote-box {
+  border-radius: 3px;
+  position: relative;
+  width: 450px;
+  padding: 40px 50px;
+  display: table;
+  background-color: #fff;
+  /* Styling for the quote text inside the box */
+  /* Styling for the author text */
+  /* Styling for the button container inside the quote box */
+}
+#quote-box #text {
+  text-align: center;
+  width: 450px;
+  height: auto;
+  clear: both;
+  font-weight: 500;
+  font-size: 1.75em;
+}
+#quote-box #author {
+  width: 450px;
+  height: auto;
+  clear: both;
+  padding-top: 20px;
+  font-size: 1em;
+  text-align: right;
+}
+#quote-box .buttons {
+  width: 450px;
+  margin: auto;
+  display: block;
+  /* Styling for individual buttons inside the quote box */
+  /* Specific styling for the tweet and tumblr buttons */
+  /* Styling for the "new quote" button */
+}
+#quote-box .buttons .button {
+  height: 38px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #333;
+  outline: none;
+  font-size: 0.85em;
+  padding: 8px 18px 6px 18px;
+  margin-top: 30px;
+  opacity: 1;
+  cursor: pointer;
+  /* Button hover effect */
+}
+#quote-box .buttons .button:hover {
+  opacity: 0.9;
+}
+#quote-box .buttons #tweet-quote,
+#quote-box .buttons #tumblr-quote {
+  float: left;
+  padding: 0px;
+  padding-top: 8px;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 5px;
+  height: 30px;
+  width: 40px;
+}
+#quote-box .buttons #new-quote {
+  float: right;
+}/*# sourceMappingURL=styles.css.map */

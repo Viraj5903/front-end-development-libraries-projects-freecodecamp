@@ -1,0 +1,103 @@
+/* Apply box-sizing: border-box to all elements, ensuring that padding and borders are included in the width/height calculations. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for the body of the page */
+body {
+  background-color: #c2c2d6;
+  height: 100vh;
+}
+
+/* Main container that holds the whole layout and centers the content inside it */
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Styling for the calculator container */
+.calculator {
+  width: 320px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid #47476b;
+  border-radius: 10px;
+  background: black;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the output screen (where results are displayed) */
+.outputScreen {
+  font-size: 29px;
+  font-family: digital;
+  color: white;
+  text-align: right;
+  line-height: 35px;
+}
+
+/* Styling for the formula screen (where the current formula is displayed) */
+.formulaScreen {
+  min-height: 20px;
+  font-family: digital;
+  font-size: 20px;
+  color: orange;
+  text-align: right;
+  vertical-align: text-top;
+  line-height: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Container for the buttons (button layout and grid structure) */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.buttons .button {
+  /* Styling for individual buttons */
+  position: relative;
+  color: white;
+  outline: 1px solid black;
+  border: none;
+  background: #4d4d4d;
+  font-family: Share Tech Mono, monospace;
+  padding: 20px;
+  font-size: 1.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.buttons .button:hover:not(#clear, #equals) {
+  /* Hover effect for buttons other than 'clear' and 'equals' */
+  background-color: #ddd;
+  color: black;
+}
+.buttons .number {
+  /* Styling for number buttons */
+  background-color: #4d4d4d;
+}
+.buttons .operator {
+  /* Styling for operator buttons */
+  background-color: rgb(102, 102, 102);
+}
+.buttons #clear {
+  /* Special styles for the 'clear' button */
+  grid-column: span 2;
+  background: rgb(172, 57, 57);
+}
+.buttons #equals {
+  /* Special styles for the 'equals' button */
+  grid-row: span 2;
+  background-color: darkblue;
+}
+.buttons #zero {
+  /* Special styles for the 'zero' button */
+  grid-column: span 2;
+}/*# sourceMappingURL=styles.css.map */

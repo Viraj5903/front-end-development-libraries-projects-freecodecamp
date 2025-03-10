@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #8d8d8d;
+  height: 100vh;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#drum-machine {
+  outline: 5px solid orange;
+  width: 660px;
+  text-align: center;
+  background-color: #b3b3b3;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pad-bank {
+  width: 332px;
+  height: 272px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.drum-pad {
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding-top: 35px;
+  cursor: pointer;
+}
+
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.control {
+  width: 100px;
+  margin: auto;
+}
+.control .select {
+  margin: auto;
+  border: 1px solid black;
+  width: 50px;
+  height: 20px;
+  padding: 1px;
+  background-color: black;
+}
+.control .select .inner {
+  width: 23px;
+  height: 19px;
+  background: blue;
+  border: 1px solid black;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#display {
+  width: 200px;
+  background-color: gray;
+  margin: 15px auto;
+  padding: 15px;
+}/*# sourceMappingURL=styles.css.map */

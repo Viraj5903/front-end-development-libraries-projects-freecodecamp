@@ -1,0 +1,93 @@
+/* Apply box-sizing: border-box to all elements, ensuring that padding and borders are included in the width/height calculations. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for the body of the page */
+body {
+  background-color: #1e555c;
+  height: 100vh;
+  text-align: center;
+  color: #FFF;
+}
+
+/* Main container that holds the whole layout and centers the content inside it */
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Styles for the main title */
+.main-title {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* Styles the container for the length controls */
+.length-controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Styles the length control */
+.length-control {
+  width: 250px;
+  font-size: 1.5rem;
+}
+.length-control .btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Styles the button */
+button {
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Styles the timer-control container */
+.timer-control {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Styles the timer container */
+.timer {
+  border: 7px solid #13353a;
+  margin: 20px auto 10px;
+  width: 300px;
+  height: 150px;
+  border-radius: 50px;
+  /* Styles the timer-wrapper which inside the timer container */
+}
+.timer .timer-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  /* Styles the element with the id "time-left" which is inside the timer-wrapper*/
+}
+.timer .timer-wrapper #time-left {
+  font-family: digital;
+  font-size: 70px;
+}
+
+/* Styles the footer */
+.footer {
+  margin-top: 20px;
+  font-size: 2rem;
+}/*# sourceMappingURL=styles.css.map */

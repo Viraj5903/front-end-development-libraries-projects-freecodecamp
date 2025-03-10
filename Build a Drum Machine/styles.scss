@@ -1,0 +1,99 @@
+// Apply box-sizing: border-box to all elements, ensuring that padding and borders are included in the width/height calculations.
+* {
+    box-sizing: border-box; // Makes padding and border part of the element's total width and height.
+    margin: 0; // Resets the default margin applied by the browser.
+    padding: 0; // Resets the default padding applied by the browser.
+}
+
+// Styles for the body of the page
+body {
+    background-color: #8d8d8d; // Sets the background color of the page to a light gray shade.
+    height: 100vh; // Makes the body's height 100% of the viewport height, filling the screen.
+}
+
+// Main container that holds the whole drum machine, centering the content inside it.
+main {
+    height: 100%; // Ensures the main container takes up 100% of the available height.
+    display: flex; // Enables flexbox layout for the container.
+    flex-direction: column; // Aligns children elements vertically (in a column).
+    justify-content: center; // Centers child elements vertically within the main container.
+    align-items: center; // Centers child elements horizontally within the main container.
+    gap: 20px; // Adds 20px of space between child elements within the main container.
+}
+
+// Container for the root element of the drum machine
+#root {
+    display: flex; // Enables flexbox layout for the root container.
+    justify-content: center; // Centers content horizontally within the root container.
+    align-items: center; // Centers content vertically within the root container.
+}
+
+// Main container for the drum machine, including the pads and controls
+#drum-machine {
+    outline: 5px solid orange; // Adds a solid orange outline around the drum machine container for visibility.
+    width: 660px; // Sets the width of the drum machine container.
+    text-align: center; // Centers text horizontally inside the drum machine container.
+    background-color: #b3b3b3; // Sets a light gray background color for the drum machine container.
+    display: flex; // Uses flexbox layout for arranging the contents inside the drum machine.
+    justify-content: space-around; // Distributes the contents of the drum machine evenly with space around them.
+}
+
+// Container for the drum pads, where the individual drum pads will be placed.
+.pad-bank {
+    width: 332px; // Sets the width of the pad bank container.
+    height: 272px; // Sets the height of the pad bank container.
+    display: flex; // Enables flexbox layout for the drum pads container.
+    flex-wrap: wrap; // Allows the drum pads to wrap to the next line if there is not enough space.
+    margin: 20px; // Adds a margin around the pad bank container to give it some space from the edges.
+}
+
+// Individual drum pad styling
+.drum-pad {
+    width: 100px; // Sets the width of each drum pad.
+    margin-right: 10px; // Adds space between each drum pad (except the last one in a row).
+    border-radius: 5px; // Rounds the corners of each drum pad for a smoother appearance.
+    padding-top: 35px; // Adds top padding inside the drum pad, positioning the content (label) in the center.
+    cursor: pointer; // Changes the cursor to a pointer when hovering over a drum pad, indicating it's clickable.
+}
+
+// Container for the control elements like power switch, volume slider, and bank toggle.
+.controls-container {
+    display: flex; // Uses flexbox for the control container layout.
+    flex-direction: column; // Stacks the control elements vertically.
+    justify-content: space-around; // Spreads out control elements evenly with space between them.
+    align-items: center; // Centers the control elements horizontally within the container.
+}
+
+// Styles for individual control elements (e.g., power button, volume slider).
+.control {
+    width: 100px; // Sets the width of the control container.
+    margin: auto; // Centers the control container horizontally within its parent.
+
+    // Styles for the select toggle (e.g., the on/off switch for power, or bank switch).
+    .select {
+        margin: auto; // Centers the select container horizontally.
+        border: 1px solid black; // Adds a black border around the select toggle.
+        width: 50px; // Sets the width of the select toggle.
+        height: 20px; // Sets the height of the select toggle.
+        padding: 1px; // Adds 1px of padding inside the select toggle container.
+        background-color: black; // Sets the background color of the select toggle to black.
+
+        // Inner part of the select toggle (e.g., the switch or button that toggles power or bank).
+        .inner {
+            width: 23px; // Sets the width of the inner toggle (the button inside).
+            height: 19px; // Sets the height of the inner toggle.
+            background: blue; // Sets the background color of the inner toggle to blue.
+            border: 1px solid black; // Adds a black border around the inner toggle.
+            box-sizing: border-box; // Ensures padding and borders are included in the element's width and height.
+            cursor: pointer; // Changes the cursor to a pointer when hovering over the inner toggle, indicating it's clickable.
+        }
+    }
+}
+
+// Display area where information like volume or sound name is shown.
+#display {
+    width: 200px; // Sets the width of the display container.
+    background-color: gray; // Sets the background color of the display to gray.
+    margin: 15px auto; // Adds a margin of 15px on the top and bottom, and centers it horizontally.
+    padding: 15px; // Adds 15px of padding inside the display container.
+}
